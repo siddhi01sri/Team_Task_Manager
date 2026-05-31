@@ -2,6 +2,7 @@ import prisma from "../config/prisma";
 import redisClient from "../config/redis";
 import { canMoveTaskStatus } from "../utils/taskStatus";
 
+
 const createError = (status: number, code: string, message: string) => {
   return { status, code, message };
 };
@@ -310,7 +311,7 @@ export const updateTaskStatus = async (
   const updatedTask = await prisma.task.update({
     where: { id },
     data: {
-      status,
+      status: status as any,
       completedAt: status === "DONE" ? new Date() : task.completedAt
     }
   });

@@ -7,7 +7,7 @@ export const canUpdateTaskStatus = async (
   next: NextFunction
 ) => {
   const user = (req as any).user;
-  const taskId = req.params.id;
+  const taskId = req.params.id as string;
 
   const task = await prisma.task.findFirst({
     where: {
@@ -37,4 +37,4 @@ export const canUpdateTaskStatus = async (
     code: "FORBIDDEN",
     message: "You cannot update this task status"
   });
-};  
+};
