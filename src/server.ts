@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.routes";
 import authRoutes from "./routes/auth.routes";
+import projectRoutes from "./routes/project.routes";
 import { errorHandler, notFound } from "./middlewares/error.middleware";
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.get("/api/v1/health", (req, res) => {
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/projects", projectRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
