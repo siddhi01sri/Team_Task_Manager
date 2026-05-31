@@ -1,3 +1,21 @@
+# How to Run
+
+Prerequisite:
+
+Docker Desktop should be installed and running.
+
+Steps:
+
+git clone <repo-url>
+cd TeamTaskManager
+docker compose up --build
+
+API will run on:
+
+http://localhost:4000
+
+<img width="1500" height="2000" alt="image" src="https://github.com/user-attachments/assets/a860682d-02de-4d93-95be-5c2d71d2fb6b" />
+
 # Team Task Manager
 
 Tech stack used  in this project - 
@@ -16,21 +34,6 @@ API Testing         : Postman
 # Project Structure 
 In this project I used monolith architecture, which is well suited for smaller projects. This approach makes it easy to maintain APIs and ensures a well organized structure.
 
-# How to Run
-
-Prerequisite:
-
-Docker Desktop should be installed and running.
-
-Steps:
-
-git clone <repo-url>
-cd TeamTaskManager
-docker compose up --build
-
-API will run on:
-
-http://localhost:4000
 
 Health check:
 
